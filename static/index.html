@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.3.js"></script>
-    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.3.min.js"></script>
-    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.3.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@holoviz/panel@0.14.0/dist/panel.min.js"></script>
+<html lang="en">
 
-    <link rel="stylesheet" href="https://pyscript.net/releases/2022.09.1/pyscript.css" />
-    <script defer src="https://pyscript.net/releases/2022.09.1/pyscript.js"></script>
-  </head>
-  <body>
-    <py-config>
-       packages = [
-         "panel",
-         ...
-       ]
-    </py-config>
-    <div id="simple_app"></div>
-    <py-script>
-      import panel as pn
+<title>Panel Playground</title>
 
-      pn.extension(sizing_mode="stretch_width")
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.3.js"></script>
+  <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.4.3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@holoviz/panel@0.14.0/dist/panel.min.js"></script>
 
-      slider = pn.widgets.FloatSlider(start=0, end=10, name='Amplitude')
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
 
-      def callback(new):
-         return f'Amplitude is: {new}'
+<body>
+  <div id="simple_app"></div>
+  <div id="df"></div>
+  <py-config>packages = [ "panel", "pandas" ]</py-config>
+  <py-script src="./app.py"></py-script>
+</body>
 
-      pn.Row(slider, pn.bind(callback, slider)).servable(target='simple_app');
-    </py-script>
-  </body>
 </html>

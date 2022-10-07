@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "panel-playground"
+version = "0.1.0"
+description = ""
+authors = ["Adon Metcalfe <adonm@fastmail.fm>"]
+readme = "README.md"
+packages = [{include = "panel_playground"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+panel = "^0.14.0"
+jupyter = "^1.0.0"
+jupyter-bokeh = "^3.0.5"
+scipy = "^1.9.1"
+scikit-learn = "^1.1.2"
+xgboost = "^1.6.2"
+pandas = "^1.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
