@@ -49,8 +49,8 @@ if ('serviceWorker' in navigator) {
 <link rel="stylesheet" href="https://cdn.holoviz.org/panel/0.14.0/dist/bundled/fastbasetemplate/fast_panel_markdown.css">
 <link rel="stylesheet" href="https://cdn.holoviz.org/panel/0.14.0/dist/bundled/fastbasetemplate/fast_awesome.css">
 <link rel="stylesheet" href="https://cdn.holoviz.org/panel/0.14.0/dist/bundled/fastlisttemplate/fast_list_template.css">
-<link rel="stylesheet" href="https://cdn.holoviz.org/panel/0.14.0/dist/bundled/fastdefaulttheme/fast_root_default.css">
-<link rel="stylesheet" href="https://cdn.holoviz.org/panel/0.14.0/dist/bundled/fastlisttemplate/default.css">
+<link rel="stylesheet" href="https://cdn.holoviz.org/panel/0.14.0/dist/bundled/fastdarktheme/fast_root_dark.css">
+<link rel="stylesheet" href="https://cdn.holoviz.org/panel/0.14.0/dist/bundled/fastlisttemplate/dark.css">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
 <style>
@@ -58,8 +58,8 @@ if ('serviceWorker' in navigator) {
     --body-font: Open Sans, sans-serif;
   }
   body {
-    color: #00aa41;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #181818;
     font-family: var(--body-font);
   }
   #header a {
@@ -70,12 +70,6 @@ if ('serviceWorker' in navigator) {
   }
   #sidebar {
     width: 330px;
-  }
-  #header {
-      box-shadow: 2px 2px 10px silver;
-  }
-  #sidebar {
-      box-shadow: 2px 2px 10px silver;
   }
 </style>
 
@@ -149,7 +143,7 @@ if ('serviceWorker' in navigator) {
     provider.backgroundColor=color;
   }
   setBackgroundColor("#0072B5", "#header-design-provider");
-  setBackgroundColor("#ffffff", "#body-design-provider");
+  setBackgroundColor("#181818", "#body-design-provider");
 
   document.querySelector("#body-design-provider").cornerRadius=3;
 
@@ -201,7 +195,7 @@ if ('serviceWorker' in navigator) {
   </head>
   <body class="bk pn-loading arc">
 <fast-design-system-provider id="body-design-provider" use-defaults accent-foreground-cut-rest="#FFFFFF"
-background-color="#ffffff"accent-base-color="#0072B5"  >
+background-color="#181818"accent-base-color="#0072B5"  >
   <div id="container">
   <fast-design-system-provider id="header-design-provider"
 background-color="#0072B5"  >
@@ -211,7 +205,7 @@ background-color="#0072B5"  >
     <div id="header-items">
   </div>
   <div class="pn-toggle-theme">
-    <fast-switch id="theme-switch" style="float: right;" onChange="toggleLightDarkTheme('default')" checked>
+    <fast-switch id="theme-switch" style="float: right;" onChange="toggleLightDarkTheme('dark')" >
       <span slot="checked-message">
         <svg class="theme-toggle-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path d="M0 0h24v24H0z" fill="none"/><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
       </span>
@@ -224,7 +218,7 @@ background-color="#0072B5"  >
     </fast-tooltip>
   </div>
 	<div class="pn-busy-container" id="busy-container">
-	  <div class="bk-root" id="305ebd40-aea0-425d-9079-add082a99d29" data-root-id="1007"></div>
+	  <div class="bk-root" id="658aacab-eb82-4d28-815d-15a80a1f7961" data-root-id="1007"></div>
 	</div>
   <fast-tooltip anchor="busy-container" position="left">
     Busy Indicator
@@ -242,7 +236,7 @@ background-color="#0072B5"  >
 <fast-card class="pn-wrapper">        <span class="fullscreen-button" onclick="toggleFullScreen(this)">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18"><path d="M4.5 11H3v4h4v-1.5H4.5V11zM3 7h1.5V4.5H7V3H3v4zm10.5 6.5H11V15h4v-4h-1.5v2.5zM11 3v1.5h2.5V7H15V3h-4z"/></svg>
         </span>
-        <div class="bk-root" id="ca41e922-14ae-4f72-b068-6c323e59d6e2" data-root-id="1008"></div>
+        <div class="bk-root" id="ee31f1b8-8230-4bc9-9acb-ab935c3a51a0" data-root-id="1008"></div>
 </fast-card>      </div>
 
       <fast-dialog id="pn-Modal" hidden style="--dialog-width: 80%; --dialog-height: auto; --background-color: var(--neutral-layer-floating);">
@@ -288,9 +282,9 @@ background-color="#0072B5"  >
   }
 </script>
 
-<div class="bk-root" id="15148da7-8403-4afc-8006-2d8537838264" data-root-id="1004"></div>
-<div class="bk-root" id="fca39c98-bd00-4568-af34-9717987e2f10" data-root-id="1006"></div>
-<div class="bk-root" id="5787d68a-f0fc-4d3d-920e-4d691629d57f" data-root-id="1002"></div>
+<div class="bk-root" id="edf4dcf9-0df0-40d6-98d2-d6c305141de6" data-root-id="1004"></div>
+<div class="bk-root" id="343da063-f56c-4afc-8ec9-3a40e934d125" data-root-id="1006"></div>
+<div class="bk-root" id="ae00ee05-f9f2-46ac-8e6d-95ad3286b338" data-root-id="1002"></div>
 
   
     <script type="text/javascript">
@@ -383,7 +377,7 @@ background-color="#0072B5"  >
       };
     </script>
     <script type="application/json" id="1015">
-      {"5bcf48ea-9d8b-438d-836b-240deabd1b4c":{"defs":[{"extends":null,"module":null,"name":"ReactiveHTML1","overrides":[],"properties":[]},{"extends":null,"module":null,"name":"FlexBox1","overrides":[],"properties":[{"default":"flex-start","kind":null,"name":"align_content"},{"default":"flex-start","kind":null,"name":"align_items"},{"default":"row","kind":null,"name":"flex_direction"},{"default":"wrap","kind":null,"name":"flex_wrap"},{"default":"flex-start","kind":null,"name":"justify_content"}]},{"extends":null,"module":null,"name":"GridStack1","overrides":[],"properties":[{"default":"warn","kind":null,"name":"mode"},{"default":null,"kind":null,"name":"ncols"},{"default":null,"kind":null,"name":"nrows"},{"default":true,"kind":null,"name":"allow_resize"},{"default":true,"kind":null,"name":"allow_drag"},{"default":[],"kind":null,"name":"state"}]},{"extends":null,"module":null,"name":"click1","overrides":[],"properties":[{"default":"","kind":null,"name":"terminal_output"},{"default":"","kind":null,"name":"debug_name"},{"default":0,"kind":null,"name":"clears"}]},{"extends":null,"module":null,"name":"NotificationAreaBase1","overrides":[],"properties":[{"default":"bottom-right","kind":null,"name":"position"},{"default":0,"kind":null,"name":"_clear"}]},{"extends":null,"module":null,"name":"NotificationArea1","overrides":[],"properties":[{"default":[],"kind":null,"name":"notifications"},{"default":"bottom-right","kind":null,"name":"position"},{"default":0,"kind":null,"name":"_clear"},{"default":[{"background":"#ffc107","icon":{"className":"fas fa-exclamation-triangle","color":"white","tagName":"i"},"type":"warning"},{"background":"#007bff","icon":{"className":"fas fa-info-circle","color":"white","tagName":"i"},"type":"info"}],"kind":null,"name":"types"}]},{"extends":null,"module":null,"name":"Notification","overrides":[],"properties":[{"default":null,"kind":null,"name":"background"},{"default":3000,"kind":null,"name":"duration"},{"default":null,"kind":null,"name":"icon"},{"default":"","kind":null,"name":"message"},{"default":null,"kind":null,"name":"notification_type"},{"default":false,"kind":null,"name":"_destroyed"}]},{"extends":null,"module":null,"name":"TemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]},{"extends":null,"module":null,"name":"MaterialTemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]}],"roots":{"references":[{"attributes":{"children":[{"id":"1014"}],"margin":[0,0,0,0],"name":"Row00137","sizing_mode":"stretch_width"},"id":"1013","type":"Row"},{"attributes":{"end":30,"margin":[5,10,5,10],"sizing_mode":"stretch_width","start":2,"title":"Number of trees","value":2},"id":"1012","type":"Slider"},{"attributes":{"css_classes":["markdown"],"margin":[5,5,5,5],"name":"Markdown00131","sizing_mode":"stretch_width","text":"&amp;lt;p&amp;gt;Move the slider below to change the number of training rounds for the XGBoost classifier. The training accuracy score will adjust accordingly.&amp;lt;/p&amp;gt;"},"id":"1011","type":"panel.models.markup.HTML"},{"attributes":{"margin":[5,5,5,5],"name":"DataFrame00129","sizing_mode":"stretch_width","text":"&amp;lt;table class=&amp;quot;dataframe panel-df&amp;quot;&amp;gt;\n  &amp;lt;thead&amp;gt;\n    &amp;lt;tr style=&amp;quot;text-align: right;&amp;quot;&amp;gt;\n      &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;sepal length (cm)&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;sepal width (cm)&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;petal length (cm)&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;petal width (cm)&amp;lt;/th&amp;gt;\n    &amp;lt;/tr&amp;gt;\n  &amp;lt;/thead&amp;gt;\n  &amp;lt;tbody&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;0&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;5.1&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.5&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.4&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;1&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;4.9&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.0&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.4&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;2&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;4.7&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.2&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.3&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;3&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;4.6&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.1&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.5&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;4&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;5.0&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.6&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.4&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n  &amp;lt;/tbody&amp;gt;\n&amp;lt;/table&amp;gt;"},"id":"1010","type":"panel.models.markup.HTML"},{"attributes":{"children":[{"id":"1009"},{"id":"1010"},{"id":"1011"},{"id":"1012"},{"id":"1013"}],"margin":[0,0,0,0],"name":"5923097232","sizing_mode":"stretch_width","tags":["main"]},"id":"1008","type":"Column"},{"attributes":{"css_classes":["loader","light"],"height":20,"margin":[5,10,5,10],"name":"busy_indicator","sizing_mode":"fixed","width":20},"id":"1007","type":"panel.models.markup.HTML"},{"attributes":{"height":0,"margin":[0,0,0,0],"name":"js_area","sizing_mode":"fixed","width":0},"id":"1004","type":"panel.models.markup.HTML"},{"attributes":{"margin":[5,10,5,10],"sizing_mode":"fixed","text":"&amp;lt;div style=&amp;quot;font-size: 18pt; color: red&amp;quot;&amp;gt;Test score&amp;lt;/div&amp;gt;\n&amp;lt;div style=&amp;quot;font-size: 54pt; color: red&amp;quot;&amp;gt;97.3%&amp;lt;/div&amp;gt;"},"id":"1014","type":"panel.models.markup.HTML"},{"attributes":{"name":"location","reload":false},"id":"1002","type":"panel.models.location.Location"},{"attributes":{"css_classes":["markdown"],"margin":[5,5,5,5],"name":"Markdown00127","sizing_mode":"stretch_width","text":"&amp;lt;p&amp;gt;Simple example of training an XGBoost classification model on the small Iris dataset.&amp;lt;/p&amp;gt;"},"id":"1009","type":"panel.models.markup.HTML"},{"attributes":{"data":{"id":"1005"},"margin":[0,0,0,0],"name":"actions","scripts":{"close_modal":["document.getElementById(&amp;#x27;pn-Modal&amp;#x27;).style.display = &amp;#x27;none&amp;#x27;"],"open_modal":["document.getElementById(&amp;#x27;pn-Modal&amp;#x27;).style.display = &amp;#x27;block&amp;#x27;"]},"subscribed_events":["dom_event"]},"id":"1006","type":"panel.models.reactive_html.ReactiveHTML"},{"attributes":{"name":"TemplateActions00107"},"id":"1005","type":"TemplateActions1"}],"root_ids":["1002","1004","1006","1007","1008"]},"title":"XGBoost Example","version":"2.4.3"}}
+      {"2168af77-1dd5-4fc6-ba4f-469c4b4bd0fa":{"defs":[{"extends":null,"module":null,"name":"ReactiveHTML1","overrides":[],"properties":[]},{"extends":null,"module":null,"name":"FlexBox1","overrides":[],"properties":[{"default":"flex-start","kind":null,"name":"align_content"},{"default":"flex-start","kind":null,"name":"align_items"},{"default":"row","kind":null,"name":"flex_direction"},{"default":"wrap","kind":null,"name":"flex_wrap"},{"default":"flex-start","kind":null,"name":"justify_content"}]},{"extends":null,"module":null,"name":"GridStack1","overrides":[],"properties":[{"default":"warn","kind":null,"name":"mode"},{"default":null,"kind":null,"name":"ncols"},{"default":null,"kind":null,"name":"nrows"},{"default":true,"kind":null,"name":"allow_resize"},{"default":true,"kind":null,"name":"allow_drag"},{"default":[],"kind":null,"name":"state"}]},{"extends":null,"module":null,"name":"click1","overrides":[],"properties":[{"default":"","kind":null,"name":"terminal_output"},{"default":"","kind":null,"name":"debug_name"},{"default":0,"kind":null,"name":"clears"}]},{"extends":null,"module":null,"name":"NotificationAreaBase1","overrides":[],"properties":[{"default":"bottom-right","kind":null,"name":"position"},{"default":0,"kind":null,"name":"_clear"}]},{"extends":null,"module":null,"name":"NotificationArea1","overrides":[],"properties":[{"default":[],"kind":null,"name":"notifications"},{"default":"bottom-right","kind":null,"name":"position"},{"default":0,"kind":null,"name":"_clear"},{"default":[{"background":"#ffc107","icon":{"className":"fas fa-exclamation-triangle","color":"white","tagName":"i"},"type":"warning"},{"background":"#007bff","icon":{"className":"fas fa-info-circle","color":"white","tagName":"i"},"type":"info"}],"kind":null,"name":"types"}]},{"extends":null,"module":null,"name":"Notification","overrides":[],"properties":[{"default":null,"kind":null,"name":"background"},{"default":3000,"kind":null,"name":"duration"},{"default":null,"kind":null,"name":"icon"},{"default":"","kind":null,"name":"message"},{"default":null,"kind":null,"name":"notification_type"},{"default":false,"kind":null,"name":"_destroyed"}]},{"extends":null,"module":null,"name":"TemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]},{"extends":null,"module":null,"name":"MaterialTemplateActions1","overrides":[],"properties":[{"default":0,"kind":null,"name":"open_modal"},{"default":0,"kind":null,"name":"close_modal"}]}],"roots":{"references":[{"attributes":{"data":{"id":"1005"},"margin":[0,0,0,0],"name":"actions","scripts":{"close_modal":["document.getElementById(&amp;#x27;pn-Modal&amp;#x27;).style.display = &amp;#x27;none&amp;#x27;"],"open_modal":["document.getElementById(&amp;#x27;pn-Modal&amp;#x27;).style.display = &amp;#x27;block&amp;#x27;"]},"subscribed_events":["dom_event"]},"id":"1006","type":"panel.models.reactive_html.ReactiveHTML"},{"attributes":{"name":"location","reload":false},"id":"1002","type":"panel.models.location.Location"},{"attributes":{"css_classes":["markdown"],"margin":[5,5,5,5],"name":"Markdown00127","sizing_mode":"stretch_width","text":"&amp;lt;p&amp;gt;Simple example of training an XGBoost classification model on the small Iris dataset.&amp;lt;/p&amp;gt;"},"id":"1009","type":"panel.models.markup.HTML"},{"attributes":{"children":[{"id":"1009"},{"id":"1010"},{"id":"1011"},{"id":"1012"},{"id":"1013"}],"margin":[0,0,0,0],"name":"5227121440","sizing_mode":"stretch_width","tags":["main"]},"id":"1008","type":"Column"},{"attributes":{"margin":[5,5,5,5],"name":"DataFrame00129","sizing_mode":"stretch_width","text":"&amp;lt;table class=&amp;quot;dataframe panel-df&amp;quot;&amp;gt;\n  &amp;lt;thead&amp;gt;\n    &amp;lt;tr style=&amp;quot;text-align: right;&amp;quot;&amp;gt;\n      &amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;sepal length (cm)&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;sepal width (cm)&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;petal length (cm)&amp;lt;/th&amp;gt;\n      &amp;lt;th&amp;gt;petal width (cm)&amp;lt;/th&amp;gt;\n    &amp;lt;/tr&amp;gt;\n  &amp;lt;/thead&amp;gt;\n  &amp;lt;tbody&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;0&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;5.1&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.5&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.4&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;1&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;4.9&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.0&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.4&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;2&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;4.7&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.2&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.3&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;3&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;4.6&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.1&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.5&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n    &amp;lt;tr&amp;gt;\n      &amp;lt;th&amp;gt;4&amp;lt;/th&amp;gt;\n      &amp;lt;td&amp;gt;5.0&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;3.6&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;1.4&amp;lt;/td&amp;gt;\n      &amp;lt;td&amp;gt;0.2&amp;lt;/td&amp;gt;\n    &amp;lt;/tr&amp;gt;\n  &amp;lt;/tbody&amp;gt;\n&amp;lt;/table&amp;gt;"},"id":"1010","type":"panel.models.markup.HTML"},{"attributes":{"children":[{"id":"1014"}],"margin":[0,0,0,0],"name":"Row00137","sizing_mode":"stretch_width"},"id":"1013","type":"Row"},{"attributes":{"name":"TemplateActions00107"},"id":"1005","type":"TemplateActions1"},{"attributes":{"margin":[5,10,5,10],"sizing_mode":"fixed","text":"&amp;lt;div style=&amp;quot;font-size: 18pt; color: red&amp;quot;&amp;gt;Test score&amp;lt;/div&amp;gt;\n&amp;lt;div style=&amp;quot;font-size: 54pt; color: red&amp;quot;&amp;gt;97.3%&amp;lt;/div&amp;gt;"},"id":"1014","type":"panel.models.markup.HTML"},{"attributes":{"css_classes":["loader","light"],"height":20,"margin":[5,10,5,10],"name":"busy_indicator","sizing_mode":"fixed","width":20},"id":"1007","type":"panel.models.markup.HTML"},{"attributes":{"height":0,"margin":[0,0,0,0],"name":"js_area","sizing_mode":"fixed","width":0},"id":"1004","type":"panel.models.markup.HTML"},{"attributes":{"end":30,"margin":[5,10,5,10],"sizing_mode":"stretch_width","start":2,"title":"Number of trees","value":2},"id":"1012","type":"Slider"},{"attributes":{"css_classes":["markdown"],"margin":[5,5,5,5],"name":"Markdown00131","sizing_mode":"stretch_width","text":"&amp;lt;p&amp;gt;Move the slider below to change the number of training rounds for the XGBoost classifier. The training accuracy score will adjust accordingly.&amp;lt;/p&amp;gt;"},"id":"1011","type":"panel.models.markup.HTML"}],"root_ids":["1002","1004","1006","1007","1008"]},"title":"XGBoost Example","version":"2.4.3"}}
     </script>
     <script type="text/javascript">
       (function() {
@@ -392,7 +386,7 @@ background-color="#0072B5"  >
             (function(root) {
               function embed_document(root) {
               const docs_json = document.getElementById('1015').textContent;
-              const render_items = [{"docid":"5bcf48ea-9d8b-438d-836b-240deabd1b4c","root_ids":["1002","1004","1006","1007","1008"],"roots":{"1002":"5787d68a-f0fc-4d3d-920e-4d691629d57f","1004":"15148da7-8403-4afc-8006-2d8537838264","1006":"fca39c98-bd00-4568-af34-9717987e2f10","1007":"305ebd40-aea0-425d-9079-add082a99d29","1008":"ca41e922-14ae-4f72-b068-6c323e59d6e2"}}];
+              const render_items = [{"docid":"2168af77-1dd5-4fc6-ba4f-469c4b4bd0fa","root_ids":["1002","1004","1006","1007","1008"],"roots":{"1002":"ae00ee05-f9f2-46ac-8e6d-95ad3286b338","1004":"edf4dcf9-0df0-40d6-98d2-d6c305141de6","1006":"343da063-f56c-4afc-8ec9-3a40e934d125","1007":"658aacab-eb82-4d28-815d-15a80a1f7961","1008":"ee31f1b8-8230-4bc9-9acb-ab935c3a51a0"}}];
               root.Bokeh.embed.embed_items(docs_json, render_items);
               }
               if (root.Bokeh !== undefined) {

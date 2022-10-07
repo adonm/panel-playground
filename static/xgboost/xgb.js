@@ -40,7 +40,7 @@ from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
 from xgboost import XGBClassifier
 
-pn.extension(sizing_mode="stretch_width", template="fast")
+pn.extension(sizing_mode="stretch_width", template="fast", theme="dark")
 pn.state.template.param.update(site="Panel in the Browser", title="XGBoost Example")
 
 iris_df = load_iris(as_frame=True)
